@@ -1,0 +1,4 @@
+pt/tangela/example/rest/ExampleRestRequest.class
+pt/tangela/example/rest/ExampleRestController.class
+pt/tangela/example/rest/mappers/ExampleMapperImpl.class
+pt/tangela/example/rest/mappers/ExampleMapper.class

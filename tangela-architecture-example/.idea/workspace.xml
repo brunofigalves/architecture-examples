@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9ab90c91-b12e-48eb-be4a-54337e1cf62c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="tangela-architecture-example" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VilxgaHHie3LUnE0GCPqYc5Zdg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/digglet-application-layer/src/main" />
+      <recent name="$PROJECT_DIR$/digglet-webapp/docker-dir" />
+      <recent name="$PROJECT_DIR$/digglet-webapp/src/main/resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pt.digglet.example.rest" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/digglet-domain-layer/src/main/resources" />
+      <recent name="$PROJECT_DIR$/digglet-webapp/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/digglet-rest-api/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-dir/Dockerfile (1)">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="tangela-application-layer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="tangela-application-layer" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Debug" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8787" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8787" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-dir/Dockerfile (1)" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="TangelaContainer" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="9990" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="9990" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8787" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8787" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="tangela-webapp/docker-dir/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-dir/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="WildflyContainer" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="9990" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="9990" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8787" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8787" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="digglet-webapp/docker-dir/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-dir/Dockerfile" />
+      <item itemvalue="Docker.docker-dir/Dockerfile (1)" />
+      <item itemvalue="Remote.Debug" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-dir/Dockerfile (1)" />
+        <item itemvalue="Docker.docker-dir/Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.25712198" />
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ab90c91-b12e-48eb-be4a-54337e1cf62c" name="Default Changelist" comment="" />
+      <created>1577744044982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577744044982</updated>
+      <workItem from="1577744046554" duration="4760000" />
+      <workItem from="1578000071618" duration="8813000" />
+      <workItem from="1578086748706" duration="11448000" />
+      <workItem from="1578133704033" duration="6512000" />
+      <workItem from="1578142062608" duration="2984000" />
+      <workItem from="1578162774048" duration="1795000" />
+      <workItem from="1578164615104" duration="11244000" />
+      <workItem from="1578241111331" duration="1402000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Assign_Data_Sources" timestamp="1578194513391">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Assign_Data_Sources/0.0.1440.900@0.0.1440.900" timestamp="1578194513391" />
+    <state x="109" y="115" width="1022" height="669" key="#Project_Structure" timestamp="1578141628026">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="109" y="115" width="1022" height="669" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1578141628026" />
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1578167216611">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1578167216611" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578092594781">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1578092594781" />
+    <state x="445" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578090969155">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="445" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1578090969155" />
+    <state x="533" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1578196292418">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1578196292418" />
+    <state x="67" y="382" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1578143815196">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="67" y="382" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1578143815196" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578097459218">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1578097459218" />
+    <state x="105" y="23" width="609" height="801" key="#docker-dir/Dockerfile" timestamp="1578092303941">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="105" y="23" width="609" height="801" key="#docker-dir/Dockerfile/0.0.1440.900@0.0.1440.900" timestamp="1578092303941" />
+    <state x="415" y="15" key="#docker-dir/Dockerfile_(1)" timestamp="1578142464132">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="415" y="15" key="#docker-dir/Dockerfile_(1)/0.0.1440.900@0.0.1440.900" timestamp="1578142464132" />
+    <state width="1398" height="232" key="GridCell.Tab.0.bottom" timestamp="1578199560396">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="232" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578199560396" />
+    <state width="1398" height="232" key="GridCell.Tab.0.center" timestamp="1578199560395">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="232" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578199560395" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1578128450962" />
+    <state width="1398" height="232" key="GridCell.Tab.0.left" timestamp="1578199560394">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="232" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578199560394" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1578128450958" />
+    <state width="1398" height="232" key="GridCell.Tab.0.right" timestamp="1578199560395">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="232" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578199560395" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1578128451016">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578128451016" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1578128451014">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1578128451014" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1578128451014">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1578128451014" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1578128451015">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1578128451015" />
+    <state x="258" y="112" key="Maven.ArtifactSearchDialog" timestamp="1578143719389">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="258" y="112" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1578143719389" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1578164593663">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578164593663" />
+    <state x="481" y="186" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1578142462829">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="481" y="186" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.1440.900@0.0.1440.900" timestamp="1578142462829" />
+    <state x="378" y="207" width="683" height="486" key="find.popup" timestamp="1578190108684">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="378" y="207" width="683" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1578190108684" />
+    <state x="97" y="147" key="new project wizard" timestamp="1578141089086">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="97" y="147" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1578141089086" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE.jar!/org/springframework/web/context/ContextLoaderListener.class</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/3.0.14.Final/resteasy-spring-3.0.14.Final.jar!/org/jboss/resteasy/plugins/spring/SpringContextLoaderListener.class</url>
+          <line>21</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

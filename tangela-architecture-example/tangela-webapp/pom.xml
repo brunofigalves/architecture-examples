@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>pt.tangela.arch</groupId>
+    <artifactId>tangela-arch-example</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>pt.tangela.arch</groupId>
+  <artifactId>tangela-webapp</artifactId>
+  <packaging>ear</packaging>
+
+  <name>Tangela Arch Example Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <docker.dir>docker-dir</docker.dir>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>pt.tangela.arch</groupId>
+      <artifactId>tangela-application-layer</artifactId>
+      <version>${tangela.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-ear-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <outputDirectory>${project.basedir}/${docker.dir}</outputDirectory>
+            <modules>
+              <webModule>
+                <groupId>pt.tangela.arch</groupId>
+                <artifactId>tangela-application-layer</artifactId>
+                <contextRoot>/tangela</contextRoot>
+              </webModule>
+            </modules>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
