@@ -12,19 +12,37 @@
 
     <artifactId>sample-service-app</artifactId>
 
-
     <dependencies>
+        <!-- Sample Service Dependencies -->
         <dependency>
             <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-bll</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-dal</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>pt.digglet.integration</groupId>
+            <artifactId>nestjs-tcp-adapter</artifactId>
+            <version>${nestjs-tcp-adapter.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0.SP1</version>
+        </dependency>
+
     </dependencies>
 </project>

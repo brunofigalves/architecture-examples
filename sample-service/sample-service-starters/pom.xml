@@ -18,7 +18,7 @@
     </properties>
 
     <modules>
-        <module>sample-service-quarkus-starter</module>
+<!--        <module>sample-service-quarkus-starter</module>-->
         <module>sample-service-spring-boot-starter</module>
     </modules>
 

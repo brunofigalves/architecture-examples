@@ -12,5 +12,25 @@
 
     <artifactId>sample-service-bll</artifactId>
 
+    <dependencies>
+        <!-- Java EE -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>${persistence-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.money</groupId>
+            <artifactId>money-api</artifactId>
+            <version>${money-api.version}</version>
+        </dependency>
+
+        <!-- Others -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

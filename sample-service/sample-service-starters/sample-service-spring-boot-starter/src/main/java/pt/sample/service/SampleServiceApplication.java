@@ -3,7 +3,9 @@ package pt.sample.service;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication()
+@SpringBootApplication(scanBasePackages = {
+        "pt.sample.service.controller"
+})
 public class SampleServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(SampleServiceApplication.class, args);

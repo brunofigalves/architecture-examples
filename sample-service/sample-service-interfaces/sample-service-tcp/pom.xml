@@ -6,11 +6,10 @@
 
     <parent>
         <groupId>pt.sample.service</groupId>
-        <artifactId>sample-service</artifactId>
+        <artifactId>sample-service-interfaces</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>sample-service-rest</artifactId>
-
+    <artifactId>sample-service-tcp</artifactId>
 
 </project>

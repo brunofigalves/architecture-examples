@@ -6,10 +6,18 @@
 
     <parent>
         <groupId>pt.sample.service</groupId>
-        <artifactId>sample-service</artifactId>
+        <artifactId>sample-service-interfaces</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>sample-service-tcp</artifactId>
+    <artifactId>sample-service-rest</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${javax.ws.rs-api.version}</version>
+        </dependency>
+
+    </dependencies>
 </project>

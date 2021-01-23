@@ -15,28 +15,33 @@
     <dependencies>
         <dependency>
             <groupId>pt.sample.service</groupId>
+            <artifactId>sample-service-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-rest</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-tcp</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-app</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-bll</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-dal</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
 
         <!-- Spring -->
