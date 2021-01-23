@@ -27,7 +27,6 @@
             <artifactId>spring-data-jpa</artifactId>
             <version>${spring-data-jpa.version}</version>
         </dependency>
-
     </dependencies>
 
 </project>

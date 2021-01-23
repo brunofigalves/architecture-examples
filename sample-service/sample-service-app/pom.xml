@@ -36,6 +36,12 @@
             <groupId>pt.digglet.integration</groupId>
             <artifactId>nestjs-tcp-adapter</artifactId>
             <version>${nestjs-tcp-adapter.version}</version>
+            <exclusions>
+                <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
