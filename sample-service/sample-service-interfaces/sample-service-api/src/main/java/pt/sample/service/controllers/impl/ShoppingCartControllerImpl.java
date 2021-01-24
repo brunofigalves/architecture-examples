@@ -11,6 +11,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class ShoppingCartControllerImpl implements ShoppingCartRestController {
+
     @Resource
     private ShoppingCartService shoppingCartService;
 
@@ -25,7 +26,7 @@ public class ShoppingCartControllerImpl implements ShoppingCartRestController {
     }
 
     @Override
-    public ShoppingCartDto getShoppingCart(AddItemDto dto) {
-        return null;
+    public ShoppingCartDto getShoppingCart(String userId) {
+        return shoppingCartService.getShoppingCartByUserId(userId);
     }
 }

@@ -1,14 +1,12 @@
 package pt.sample.service.services.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Setter
 public class ProductDto {
     private String productId;
     private Double price;

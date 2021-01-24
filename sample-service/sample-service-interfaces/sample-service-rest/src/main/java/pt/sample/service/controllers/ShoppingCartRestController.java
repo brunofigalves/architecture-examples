@@ -21,5 +21,5 @@ public interface ShoppingCartRestController {
     void removeItem(String productId);
 
     @GET
-    ShoppingCartDto getShoppingCart(AddItemDto dto);
+    ShoppingCartDto getShoppingCart(String userId);
 }

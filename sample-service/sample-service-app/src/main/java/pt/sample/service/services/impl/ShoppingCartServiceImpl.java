@@ -26,7 +26,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     @Resource
     private ShoppingCartRepository shoppingCartRepository;
 
-    private final CurrencyUnit eur = null;
+    private final CurrencyUnit eur = Monetary.getCurrency("EUR");
 
     @Override
     public ItemDto addItem(AddItemDto dto) {
@@ -45,6 +45,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
         // Add new item to shopping cart
         shoppingCart.addItem(item);
+        this.shoppingCartRepository.save(shoppingCart);
 
         return ItemDto.builder()
                 .productId(item.getProductId())
@@ -64,6 +65,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     private Item createItemFrom(ProductDto productDto, Integer quantity) {
         MonetaryAmount price = Monetary.getDefaultAmountFactory()
+                .setCurrency(eur)
                 .setNumber(productDto.getPrice())
                 .create();
 

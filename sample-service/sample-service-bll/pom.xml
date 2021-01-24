@@ -27,7 +27,7 @@
         <dependency>
             <groupId>org.javamoney</groupId>
             <artifactId>moneta</artifactId>
-            <version>1.4.2</version>
+            <version>${javamoney.moneta.version}</version>
             <type>pom</type>
         </dependency>
 

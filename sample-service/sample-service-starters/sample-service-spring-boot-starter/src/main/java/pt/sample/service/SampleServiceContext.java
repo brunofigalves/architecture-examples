@@ -3,6 +3,8 @@ package pt.sample.service;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+import pt.digglet.integration.NestJsTcpClient;
 import pt.sample.service.controllers.ShoppingCartRestController;
 import pt.sample.service.controllers.impl.ShoppingCartControllerImpl;
 import pt.sample.service.services.ProductsService;
@@ -26,6 +28,12 @@ public class SampleServiceContext {
     @Bean
     public ProductsService productsService() {
         return new ProductsServiceImpl();
+    }
+
+    @Bean
+    @Lazy
+    public NestJsTcpClient nestJsTcpClient(){
+       return new NestJsTcpClient("localhost", 60260);
     }
 
 }

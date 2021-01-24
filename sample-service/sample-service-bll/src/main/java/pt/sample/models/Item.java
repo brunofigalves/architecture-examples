@@ -28,7 +28,7 @@ public class Item {
     }
 
     public Item(String productId, MonetaryAmount price, Quantity quantity) throws Exception {
-        if(price.isPositiveOrZero()) {
+        if(!price.isPositiveOrZero()) {
             throw new Exception("Product can not cost less than 0 euros");
         }
         this.productId = productId.toString();
