@@ -24,6 +24,12 @@
             <artifactId>money-api</artifactId>
             <version>${money-api.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.javamoney</groupId>
+            <artifactId>moneta</artifactId>
+            <version>1.4.2</version>
+            <type>pom</type>
+        </dependency>
 
         <!-- Others -->
         <dependency>

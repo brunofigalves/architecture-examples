@@ -11,7 +11,6 @@ import pt.sample.service.services.impl.ProductsServiceImpl;
 import pt.sample.service.services.impl.ShoppingCartServiceImpl;
 
 @Configuration
-@ComponentScan(basePackages = {"pt.sample.service.controllers.impl"})
 public class SampleServiceContext {
 
     @Bean
