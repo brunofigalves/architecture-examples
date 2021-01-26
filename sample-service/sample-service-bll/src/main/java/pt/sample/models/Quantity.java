@@ -1,54 +1,54 @@
 package pt.sample.models;
 
+import pt.sample.exceptions.SampleServiceException;
+
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Transient;
 
 @Embeddable
 public class Quantity {
-    private int value;
+    @Column(name = "QUANTITY")
+    private Integer value;
     @Transient
-    private int lowerBound = 0;
+    private Integer lowerBound = 0;
     @Transient
-    private int upperBound = 1000;
+    private Integer upperBound = 1000;
 
     protected Quantity() {
         // Only for use of JPA
     }
 
-    public Quantity(int value) throws Exception {
+    public Quantity(Integer value) throws SampleServiceException {
         if(value < lowerBound || value > upperBound) {
-            throw new Exception();
+            throw new SampleServiceException();
         }
 
         this.value = value;
     }
 
-    public static Quantity zero() throws Exception {
+    public static Quantity zero() throws SampleServiceException {
         return new Quantity(0);
     }
 
-    public static Quantity valueOf(int n) throws Exception {
+    public static Quantity valueOf(Integer n) throws SampleServiceException {
         return new Quantity(n);
-    }
-
-    public static Quantity valueOf(Long n) throws Exception {
-        return new Quantity(Math.toIntExact(n));
     }
 
     public Integer value() {
         return this.value;
     }
 
-    public void add(Quantity q) throws Exception {
+    public void add(Quantity q) throws SampleServiceException {
         if((this.value + q.value()) < lowerBound || (this.value + q.value()) > upperBound) {
-            throw new Exception();
+            throw new SampleServiceException();
         }
         this.value += q.value();
     }
 
-    public void minus(Quantity q) throws Exception {
+    public void minus(Quantity q) throws SampleServiceException {
         if((this.value - q.value()) < lowerBound || (this.value - q.value()) > upperBound) {
-            throw new Exception();
+            throw new SampleServiceException();
 
         }
         this.value -= q.value();

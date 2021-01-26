@@ -23,6 +23,7 @@
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <javax.cdi-api.version>2.0.SP1</javax.cdi-api.version>
         <javamoney.moneta.version>1.4.2</javamoney.moneta.version>
+        <javax.transaction-api>1.2</javax.transaction-api>
 
         <!-- Spring -->
         <spring-boot.version>2.4.1</spring-boot.version>

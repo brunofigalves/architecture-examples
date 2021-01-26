@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import pt.digglet.integration.NestJsTcpClient;
+import pt.digglet.integration.exceptions.NestJsConnectionException;
 import pt.sample.service.controllers.ShoppingCartRestController;
 import pt.sample.service.controllers.impl.ShoppingCartControllerImpl;
 import pt.sample.service.services.ProductsService;
@@ -32,8 +33,8 @@ public class SampleServiceContext {
 
     @Bean
     @Lazy
-    public NestJsTcpClient nestJsTcpClient(){
-       return new NestJsTcpClient("localhost", 60260);
+    public NestJsTcpClient nestJsTcpClient() throws NestJsConnectionException {
+       return NestJsTcpClient.createClient("localhost", 60260);
     }
 
 }

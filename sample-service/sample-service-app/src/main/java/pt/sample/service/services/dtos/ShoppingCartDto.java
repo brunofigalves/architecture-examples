@@ -16,5 +16,5 @@ public class ShoppingCartDto {
     private String userId;
     private Double totalPrice;
     private Integer totalQuantity;
-    private Set<AddItemDto> products;
+    private Set<ItemDto> products;
 }

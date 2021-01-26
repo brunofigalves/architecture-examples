@@ -16,7 +16,7 @@ public class ShoppingCartControllerImpl implements ShoppingCartRestController {
     private ShoppingCartService shoppingCartService;
 
     @Override
-    public ItemDto addItem(AddItemDto dto) {
+    public ItemDto addItem(AddItemDto dto) throws Exception {
         return shoppingCartService.addItem(dto);
     }
 
