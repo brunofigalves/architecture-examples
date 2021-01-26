@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gsandwich-sandwiches-config
+  labels:
+    app: gsandwich-sandwiches
+data:
+  API_GATEWAY_SERVICE: http://gsandwich-api-gateway-service:8080
+  DATABASE_URL: jdbc:postgresql://gsandwich-sandwiches-db-service:5436/postgres
+  DATABASE_USERNAME: postgres
+  DATABASE_PASSWORD: admin

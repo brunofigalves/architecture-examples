@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gsandwich-sandwiches-db-deployment
+spec:
+  selector:
+    matchLabels:
+      app: gsandwich-sandwiches-db
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gsandwich-sandwiches-db
+    spec:
+      containers:
+        - name: gsandwich-sandwiches-db
+          image: postgres:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5436
+          envFrom:
+            - configMapRef:
+                name: gsandwich-sandwiches-db-config
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: gsandwich-sandwiches-db-pv
+      volumes:
+        - name: gsandwich-sandwiches-db-pv
+          persistentVolumeClaim:
+            claimName: gsandwich-sandwiches-db-pv-claim
