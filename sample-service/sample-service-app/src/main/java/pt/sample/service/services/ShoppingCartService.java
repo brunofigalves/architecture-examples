@@ -6,7 +6,7 @@ import pt.sample.service.services.dtos.ShoppingCartDto;
 
 public interface ShoppingCartService {
 
-    ItemDto addItem(AddItemDto dto);
+    ItemDto addItem(AddItemDto dto) throws Exception;
 
     void removeItem(String productId);
 

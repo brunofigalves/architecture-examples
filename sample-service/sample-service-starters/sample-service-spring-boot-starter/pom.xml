@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>sample-service-spring-boot-starter</artifactId>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
@@ -99,9 +100,6 @@
                     <addResources>true</addResources>
                     <executable>true</executable>
                     <mainClass>pt.sample.service.SampleServiceApplication</mainClass>
-<!--                    <jvmArguments>-->
-<!--                        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005-->
-<!--                    </jvmArguments>-->
                 </configuration>
                 <executions>
                     <execution>

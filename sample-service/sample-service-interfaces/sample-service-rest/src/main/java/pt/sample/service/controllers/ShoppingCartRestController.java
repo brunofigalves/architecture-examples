@@ -8,18 +8,19 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/shopping-cart")
-@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface ShoppingCartRestController {
 
     @POST
     @Path("/add-item")
-    ItemDto addItem(AddItemDto dto);
+    @Consumes(MediaType.APPLICATION_JSON)
+    ItemDto addItem(AddItemDto dto) throws Exception;
 
-    @POST()
+    @POST
     @Path("/remove-item")
+    @Consumes(MediaType.APPLICATION_JSON)
     void removeItem(String productId);
 
     @GET
-    ShoppingCartDto getShoppingCart(String userId);
+    ShoppingCartDto getShoppingCart(@QueryParam("userId") String userId);
 }

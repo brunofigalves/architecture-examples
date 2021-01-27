@@ -1,5 +1,7 @@
 package pt.sample.models;
 
+import pt.sample.exceptions.SampleServiceException;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -29,11 +31,47 @@ public class ShoppingCart {
         this.userId = userId;
     }
 
+    public String getShoppingCartId() {
+        return shoppingCartId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public Set<Item> getItems() {
+        return items;
+    }
+
     public static ShoppingCart newShoppingCart(String userId) {
         return new ShoppingCart(UUID.randomUUID().toString(), userId);
     }
 
-    public void addItem(Item i) {
-        this.items.add(i);
+    public void addItem(Item i) throws SampleServiceException{
+        if (items.contains(i)){
+            throw new SampleServiceException(String.format("Product id %s already exist", i.getProductId()));
+        }
+        items.add(i);
+    }
+
+    public void increaseItemQuantity(String productId, Quantity quantity) throws SampleServiceException {
+        getItem(productId).getQuantity().add(quantity);
+    }
+
+    public Item getItem(String productId) {
+        return items.stream()
+                .filter(e -> e.getProductId().equals(productId))
+                .findAny().orElse(null);
+    }
+
+    public Double getTotalPrice() {
+        return items.stream()
+                .mapToDouble(e -> e.getPrice().getNumber().doubleValue())
+                .sum();
+    }
+
+    public Integer getTotalQuantity() {
+        return items.stream()
+                .mapToInt(e -> e.getQuantity().value()).sum();
     }
 }

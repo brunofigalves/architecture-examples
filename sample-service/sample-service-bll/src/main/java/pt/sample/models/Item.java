@@ -11,13 +11,12 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private String id;
+    private Long id;
     @Column(name = "PRODUCT_ID")
     private String productId;
     @Column(name = "PRICE")
     private Double price;
     @Embedded
-    @Column(name = "QUANTITY")
     private Quantity quantity;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="SHOPPING_CART_ID")
@@ -27,17 +26,18 @@ public class Item {
         // Only for JPA purpose
     }
 
-    public Item(String productId, MonetaryAmount price, Quantity quantity) throws Exception {
+    public Item(String productId, MonetaryAmount price, Quantity quantity, ShoppingCart shoppingCart) throws Exception {
         if(!price.isPositiveOrZero()) {
             throw new Exception("Product can not cost less than 0 euros");
         }
         this.productId = productId.toString();
         this.price = price.getNumber().doubleValue();
         this.quantity = quantity;
+        this.shoppingCart= shoppingCart;
     }
-
-    public static Item newItem(String productId, MonetaryAmount price) throws Exception {
-        return new Item(productId, price, Quantity.zero());
+    
+    public static Item newItem(String productId, MonetaryAmount price, ShoppingCart shoppingCart) throws Exception {
+        return new Item(productId, price, Quantity.zero(), shoppingCart);
     }
 
     public void addQuantity(Quantity q) throws Exception {
