@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gsandwich-sandwiches-deployment
+  name: sample-app-deployment
 spec:
   selector:
     matchLabels:
-      app: gsandwich-sandwiches
+      app: sample-app
   replicas: 1
   template:
     metadata:
       labels:
-        app: gsandwich-sandwiches
+        app: sample-app
     spec:
       containers:
-      - name: gsandwich-sandwiches
-        image: gsandwich-sandwiches:latest
+      - name: sample-app
+        image: sample-app:latest
         ports:
-        - containerPort: 8085
+        - containerPort: 8080
         envFrom:
           - configMapRef:
-              name: gsandwich-sandwiches-config
+              name: sample-app-config
         imagePullPolicy: Never

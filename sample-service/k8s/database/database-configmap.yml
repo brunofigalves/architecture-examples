@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: gsandwich-sandwiches-db-config
+  name: sample-db-config
   labels:
-    app: gsandwich-sandwiches-db
+    app: sample-db
 data:
   POSTGRES_DB: postgres
   POSTGRES_USER: postgres

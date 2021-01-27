@@ -1,10 +1,10 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: gsandwich-sandwiches-db-pv
+  name: sample-db-pv
   labels:
     type: local
-    app: gsandwich-sandwiches-db
+    app: sample-db
 spec:
   storageClassName: manual
   capacity:
@@ -17,9 +17,9 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: gsandwich-sandwiches-db-pv-claim
+  name: sample-db-pv-claim
   labels:
-    app: gsandwich-sandwiches-db
+    app: sample-db
 spec:
   storageClassName: manual
   accessModes:

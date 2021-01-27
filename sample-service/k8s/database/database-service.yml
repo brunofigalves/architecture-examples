@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gsandwich-sandwiches-db-service
+  name: sample-db-service
 spec:
   type: NodePort
   ports:
   - name: http
     # Which port on the node is the service available through?
-    nodePort: 30051
+    nodePort: 30090
     # Inside the cluster, what port does the service expose?
-    port: 5436
+    port: 5432
     # Which port do pods selected by this service expose?
     targetPort: 5432
     protocol: TCP
   selector:
-    app: gsandwich-sandwiches-db
+    app: sample-db
