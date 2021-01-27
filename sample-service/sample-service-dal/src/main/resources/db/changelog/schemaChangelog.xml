@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="bruno (generated)" id="1611749456665-1">
+        <createTable tableName="item">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="item_pkey"/>
+            </column>
+            <column name="price" type="FLOAT8"/>
+            <column name="product_id" type="VARCHAR(255)"/>
+            <column name="quantity" type="INTEGER"/>
+            <column name="shopping_cart_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="bruno (generated)" id="1611749456665-2">
+        <createTable tableName="shopping_cart">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="shopping_cart_pkey"/>
+            </column>
+            <column name="shopping_cart_id" type="VARCHAR(255)"/>
+            <column name="user_id" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="bruno (generated)" id="1611749456665-3">
+        <addUniqueConstraint columnNames="shopping_cart_id" constraintName="uk_3584orgbl4dctn9vkh6crf6kt" tableName="shopping_cart"/>
+    </changeSet>
+    <changeSet author="bruno (generated)" id="1611749456665-4">
+        <addUniqueConstraint columnNames="user_id" constraintName="uk_qx5dh8nhlnh77h8im91vlqwdv" tableName="shopping_cart"/>
+    </changeSet>
+    <changeSet author="bruno (generated)" id="1611749456665-5">
+        <addForeignKeyConstraint baseColumnNames="shopping_cart_id" baseTableName="item" constraintName="fkb4v596wqde51kaljt9epgnyaq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="shopping_cart" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
