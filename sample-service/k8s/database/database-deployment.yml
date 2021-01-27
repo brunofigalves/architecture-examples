@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-db-deployment
+spec:
+  selector:
+    matchLabels:
+      app: sample-db
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sample-db
+    spec:
+      containers:
+        - name: sample-db
+          image: postgres:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: sample-db-config
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: sample-db-pv
+      volumes:
+        - name: sample-db-pv
+          persistentVolumeClaim:
+            claimName: sample-db-pv-claim
