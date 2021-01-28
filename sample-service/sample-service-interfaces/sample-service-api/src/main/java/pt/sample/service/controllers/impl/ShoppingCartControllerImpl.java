@@ -6,14 +6,14 @@ import pt.sample.service.services.dtos.AddItemDto;
 import pt.sample.service.services.dtos.ItemDto;
 import pt.sample.service.services.dtos.ShoppingCartDto;
 
-import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 @ApplicationScoped
 public class ShoppingCartControllerImpl implements ShoppingCartRestController {
 
-    @Resource
-    private ShoppingCartService shoppingCartService;
+    @Inject
+    ShoppingCartService shoppingCartService;
 
     @Override
     public ItemDto addItem(AddItemDto dto) throws Exception {

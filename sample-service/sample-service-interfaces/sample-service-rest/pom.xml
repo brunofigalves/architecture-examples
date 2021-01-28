@@ -11,13 +11,21 @@
     </parent>
 
     <artifactId>sample-service-rest</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>pt.sample.service</groupId>
+            <artifactId>sample-service-app</artifactId>
+            <version>${project.parent.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
             <version>${javax.ws.rs-api.version}</version>
         </dependency>
-
     </dependencies>
+
 </project>

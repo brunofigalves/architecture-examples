@@ -22,19 +22,45 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <!-- Quarkus -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-spring-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>pt.sample.service</groupId>
-            <artifactId>sample-service-rest</artifactId>
+            <artifactId>sample-service-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
-            <artifactId>sample-service-tcp</artifactId>
+            <artifactId>sample-service-rest</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
@@ -52,22 +78,32 @@
             <artifactId>sample-service-dal</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-
-        <!-- Quarkus -->
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-arc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-junit5</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+                <version>${quarkus-plugin.version}</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>generate-code</goal>
+                            <goal>generate-code-tests</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-plugin.version}</version>
+            </plugin>
+
             <plugin>
                 <groupId>org.jboss.jandex</groupId>
                 <artifactId>jandex-maven-plugin</artifactId>
@@ -86,38 +122,17 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire-plugin.version}</version>
                 <configuration>
-                    <systemProperties>
+                    <systemPropertyVariables>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
-                    </systemProperties>
+                    </systemPropertyVariables>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-maven-plugin</artifactId>
-                <version>${quarkus-plugin.version}</version>
-                <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                            <goal>generate-code</goal>
-                            <goal>generate-code-tests</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${compiler-plugin.version}</version>
             </plugin>
 
         </plugins>
     </build>
 
     <profiles>
-
         <profile>
             <id>native</id>
             <activation>
@@ -138,8 +153,11 @@
                                 </goals>
                                 <configuration>
                                     <systemPropertyVariables>
-                                        <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
-                                        <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                                        <native.image.path>
+                                            ${project.build.directory}/${project.build.finalName}-runner
+                                        </native.image.path>
+                                        <java.util.logging.manager>org.jboss.logmanager.LogManager
+                                        </java.util.logging.manager>
                                         <maven.home>${maven.home}</maven.home>
                                     </systemPropertyVariables>
                                 </configuration>
@@ -152,7 +170,6 @@
                 <quarkus.package.type>native</quarkus.package.type>
             </properties>
         </profile>
-
     </profiles>
 
 </project>

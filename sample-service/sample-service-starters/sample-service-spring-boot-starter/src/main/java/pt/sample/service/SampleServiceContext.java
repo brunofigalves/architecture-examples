@@ -32,7 +32,6 @@ public class SampleServiceContext {
     }
 
     @Bean
-    @Lazy
     public NestJsTcpClient nestJsTcpClient() throws NestJsConnectionException {
        return NestJsTcpClient.createClient("localhost", 60260);
     }
