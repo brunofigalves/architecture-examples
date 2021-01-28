@@ -16,6 +16,9 @@ import pt.sample.service.services.impl.ShoppingCartServiceImpl;
 @Configuration
 public class SampleServiceContext {
 
+    private String nestJsHost = System.getenv("KK_PRODUCTS_HOST");
+    private Integer nestJsPort = Integer.parseInt(System.getenv("KK_PRODUCTS_PORT"));
+
     @Bean
     public ShoppingCartRestController shoppingCartRestController() {
         return new ShoppingCartControllerImpl();
@@ -33,7 +36,7 @@ public class SampleServiceContext {
 
     @Bean
     public NestJsTcpClient nestJsTcpClient() throws NestJsConnectionException {
-       return NestJsTcpClient.createClient("localhost", 60260);
+       return NestJsTcpClient.createClient(nestJsHost, nestJsPort);
     }
 
 }

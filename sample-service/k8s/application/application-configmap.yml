@@ -5,6 +5,8 @@ metadata:
   labels:
     app: sample-app
 data:
-  DATABASE_URL: jdbc:postgresql://postgres:5432/postgres
+  DATABASE_URL: jdbc:postgresql://sample-db-service:5432/postgres
   DATABASE_USERNAME: postgres
   DATABASE_PASSWORD: admin
+  KK_PRODUCTS_HOST: kk-test-products-service
+  KK_PRODUCTS_PORT: 60260

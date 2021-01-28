@@ -87,7 +87,7 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
-                    <include>**/*.yml</include>
+                    <include>**/*.yaml</include>
                 </includes>
             </resource>
         </resources>
