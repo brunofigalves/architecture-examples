@@ -15,16 +15,6 @@
     <modules>
         <module>sample-service-api</module>
         <module>sample-service-rest</module>
-        <module>sample-service-tcp</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>pt.sample.service</groupId>
-            <artifactId>sample-service-app</artifactId>
-            <version>${project.parent.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 
 </project>

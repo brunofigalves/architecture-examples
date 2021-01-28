@@ -7,14 +7,14 @@ import pt.sample.service.services.ProductsService;
 import pt.sample.service.services.dtos.GetProductDto;
 import pt.sample.service.services.dtos.ProductDto;
 
-import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 @ApplicationScoped
 public class ProductsServiceImpl implements ProductsService {
 
-    @Resource
-    private NestJsTcpClient nestJsClient;
+    @Inject
+    NestJsTcpClient nestJsClient;
 
     public ProductDto getProduct(String productId) {
         ProductDto dto = null;

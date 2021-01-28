@@ -11,19 +11,41 @@
     </parent>
 
     <artifactId>sample-service-api</artifactId>
-
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>pt.sample.service</groupId>
-            <artifactId>sample-service-rest</artifactId>
+            <artifactId>sample-service-app</artifactId>
             <version>${project.parent.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
-            <artifactId>sample-service-tcp</artifactId>
+            <artifactId>sample-service-rest</artifactId>
             <version>${project.parent.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.jboss.jandex</groupId>
+                <artifactId>jandex-maven-plugin</artifactId>
+                <version>${jandex-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>make-index</id>
+                        <goals>
+                            <goal>jandex</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>

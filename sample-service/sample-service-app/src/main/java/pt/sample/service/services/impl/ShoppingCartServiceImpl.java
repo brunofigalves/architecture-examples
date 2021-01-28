@@ -12,8 +12,8 @@ import pt.sample.service.services.dtos.ItemDto;
 import pt.sample.service.services.dtos.ProductDto;
 import pt.sample.service.services.dtos.ShoppingCartDto;
 
-import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.money.CurrencyUnit;
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
@@ -24,11 +24,11 @@ import java.util.Set;
 @ApplicationScoped
 public class ShoppingCartServiceImpl implements ShoppingCartService {
 
-    @Resource
-    private ProductsService productsService;
+    @Inject
+    ProductsService productsService;
 
-    @Resource
-    private ShoppingCartRepository shoppingCartRepository;
+    @Inject
+    ShoppingCartRepository shoppingCartRepository;
 
     private final CurrencyUnit eur = Monetary.getCurrency("EUR");
 
