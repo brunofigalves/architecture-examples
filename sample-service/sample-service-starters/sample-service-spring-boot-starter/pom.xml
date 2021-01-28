@@ -26,11 +26,6 @@
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
-            <artifactId>sample-service-tcp</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-app</artifactId>
             <version>${project.parent.version}</version>
             <exclusions>
