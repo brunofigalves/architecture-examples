@@ -31,6 +31,10 @@ public class ShoppingCart {
         this.userId = userId;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getShoppingCartId() {
         return shoppingCartId;
     }

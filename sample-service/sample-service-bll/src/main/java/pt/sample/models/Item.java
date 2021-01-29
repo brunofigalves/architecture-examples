@@ -44,6 +44,10 @@ public class Item {
         this.quantity.add(q);
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getProductId() {
         return productId;
     }
