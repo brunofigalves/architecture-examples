@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+
+  flowable-rest:
+    image: flowable/flowable-rest
+    ports:
+      - '8180:8080'
+    depends_on:
+      - flowable-db
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_DRIVER-CLASS-NAME: org.postgresql.Driver
+      SPRING_DATASOURCE_URL: jdbc:postgresql://flowable-db:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: admin
+      FLOWABLE_REST_APP_ADMIN_USER-ID: rest-admin
+      FLOWABLE_REST_APP_ADMIN_PASSWORD: test
+      FLOWABLE_REST_APP_ADMIN_FIRST-NAME: Rest
+      FLOWABLE_REST_APP_ADMIN_LAST-NAME: Admin
+
+  flowable-db:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin

@@ -49,14 +49,14 @@
         <nestjs-tcp-adapter.version>0.1-SNAPSHOT</nestjs-tcp-adapter.version>
         <postgresql-driver.version>42.2.18</postgresql-driver.version>
         <liquibase-maven-plugin.version>4.2.2</liquibase-maven-plugin.version>
+        <flowable.version>6.6.0</flowable.version>
     </properties>
 
     <modules>
-        <module>sample-service-app</module>
-        <module>sample-service-bll</module>
         <module>sample-service-dal</module>
         <module>sample-service-interfaces</module>
         <module>sample-service-starters</module>
+        <module>sample-service-core</module>
     </modules>
 
     <dependencies>

@@ -48,6 +48,11 @@
         </dependency>
         <dependency>
             <groupId>pt.sample.service</groupId>
+            <artifactId>sample-service-workflow</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pt.sample.service</groupId>
             <artifactId>sample-service-dal</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
@@ -73,6 +78,13 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>${postgresql-driver.version}</version>
+        </dependency>
+
+        <!-- Flowable -->
+        <dependency>
+            <groupId>org.flowable</groupId>
+            <artifactId>flowable-spring-boot-starter-rest</artifactId>
+            <version>${flowable.version}</version>
         </dependency>
     </dependencies>
 

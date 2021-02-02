@@ -1,9 +1,8 @@
 package pt.sample.service;
 
+import org.flowable.dmn.engine.DmnEngine;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 import pt.digglet.integration.NestJsTcpClient;
 import pt.digglet.integration.exceptions.NestJsConnectionException;
 import pt.sample.service.controllers.ShoppingCartRestController;
@@ -37,6 +36,12 @@ public class SampleServiceContext {
     @Bean
     public NestJsTcpClient nestJsTcpClient() throws NestJsConnectionException {
        return NestJsTcpClient.createClient(nestJsHost, nestJsPort);
+    }
+
+    @Bean
+    public DmnEngine dmnEngine() {
+        DmnEngineSetup dmnEngineSetup = new DmnEngineSetup();
+        return dmnEngineSetup.setup();
     }
 
 }

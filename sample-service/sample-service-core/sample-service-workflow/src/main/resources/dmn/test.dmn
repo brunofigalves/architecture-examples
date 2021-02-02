@@ -1,0 +1,20 @@
+<definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="definition_eccc3243-65a0-11eb-bbcf-0242ac110002" name="test" namespace="http://www.flowable.org/dmn">
+  <decision id="test" name="test">
+    <decisionTable id="decisionTable_eccc3243-65a0-11eb-bbcf-0242ac110002" hitPolicy="FIRST">
+      <input label="varInput">
+        <inputExpression id="inputExpression_3" typeRef="number">
+          <text>varInput</text>
+        </inputExpression>
+      </input>
+      <output id="outputExpression_2" label="varOutput" name="varOutput" typeRef="number"></output>
+      <rule>
+        <inputEntry id="inputEntry_3_1">
+          <text><![CDATA[!= 0]]></text>
+        </inputEntry>
+        <outputEntry id="outputEntry_2_1">
+          <text><![CDATA[#{ruleExample.calculation(varInput)}]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
