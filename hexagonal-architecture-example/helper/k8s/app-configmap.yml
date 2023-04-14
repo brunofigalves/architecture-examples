@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-users-app-config
+  labels:
+    app: sample-users-app
+data:
+  MONGO_URL: mongodb://mongo:admin@sample-users-db-service:27017/users?authSource=admin
+  MONGO_DATABASE: users
