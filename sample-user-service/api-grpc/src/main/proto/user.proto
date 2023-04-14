@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.sample.user.api.grpc";
+option java_outer_classname = "UserServiceProto";
+
+package com.sample.user.api.grpc;
+
+service UserGrpcService {
+  rpc getUser (GetUserRequest) returns (UserResponse);
+  rpc getUsers (VoidRequest) returns (stream UserResponse);
+  rpc newUser (NewUserRequest) returns (UserResponse);
+}
+
+message GetUserRequest {
+  string userId = 1;
+}
+
+message NewUserRequest {
+  string userId = 1;
+  string name = 2;
+  string email = 3;
+  AddressResponse defaultAddress = 4;
+}
+
+message VoidRequest {
+}
+
+message UserResponse {
+  string userId = 1;
+  string name = 2;
+  string email = 3;
+  AddressResponse defaultAddress = 4;
+}
+
+message AddressResponse {
+  string street = 1;
+  string city = 2;
+  string state = 3;
+  string country = 4;
+  string zipCode = 5;
+}

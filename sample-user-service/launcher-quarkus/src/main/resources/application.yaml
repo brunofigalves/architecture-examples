@@ -1,0 +1,12 @@
+quarkus:
+  mongodb:
+    connection-string: ${MONGO_URL:mongodb://mongo:admin@localhost:27017/users?authSource=admin}
+    database: ${MONGO_DATABASE:users}
+
+  generate-code:
+    grpc:
+      scan-for-proto: com.sample.microservice:api-grpc
+
+  grpc:
+    server:
+      use-separate-server: false
