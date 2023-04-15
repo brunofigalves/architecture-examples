@@ -16,7 +16,7 @@
         <!-- Service Dependencies -->
         <dependency>
             <groupId>com.sample.microservice</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 

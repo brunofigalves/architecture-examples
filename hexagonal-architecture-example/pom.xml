@@ -46,10 +46,10 @@
     <modules>
         <module>api</module>
         <module>api-rest</module>
+        <module>api-grpc</module>
         <module>domain</module>
         <module>spi-mongodb</module>
         <module>launcher-quarkus</module>
-        <module>api-grpc</module>
     </modules>
 
     <build>

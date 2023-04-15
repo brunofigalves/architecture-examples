@@ -6,7 +6,7 @@ option java_outer_classname = "UserServiceProto";
 
 package com.sample.user.api.grpc;
 
-service UserGrpcService {
+service UserGrpcController {
   rpc getUser (GetUserRequest) returns (UserResponse);
   rpc getUsers (VoidRequest) returns (stream UserResponse);
   rpc newUser (NewUserRequest) returns (UserResponse);

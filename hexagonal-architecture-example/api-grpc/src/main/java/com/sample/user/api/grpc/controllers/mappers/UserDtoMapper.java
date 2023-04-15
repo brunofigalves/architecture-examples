@@ -1,4 +1,4 @@
-package com.sample.user.api.grpc.mappers;
+package com.sample.user.api.grpc.controllers.mappers;
 
 import com.sample.user.api.grpc.NewUserRequest;
 import com.sample.user.domain.models.dtos.UserDto;

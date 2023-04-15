@@ -12,11 +12,11 @@
    1. [Diagrams](#diagrams)
 4. [Implementation](#implementation)
    1. [Presentation Layer](#application-layer)
-   2. [Domain Layer](#business-layer)
+   2. [Domain Layer](#domain-layer)
    3. [Data Layer](#data-layer)
    4. [Deployment](#deployment)
 5. [Conclusions](#conclusions)
-4. [References](#references)
+6. [References](#references)
 
 ## Design Objective
 
@@ -40,12 +40,12 @@ The architecturally significant technical & functional, use cases & requirements
 
 The quality attributes / non-functional requirements (NFRs) relevant to this design and how they relate to the use cases listed above:
 
-| ID       | Quality Attribute | Scenario                                                                                | Associated Use Cases Ids |
-|----------|-------------------|-----------------------------------------------------------------------------------------|--------------------------|
-| **QA-1** | Automation        | Automated local deployment to Docker and database initialization                        | UC-3                     |
-| **QA-2** | Modularity        | Have the business logic separate and independent of presentation and persistence layers | UC-2                     |
-| **QA-3** | Integration       | Highly integrated from the start, providing multiple API protocols                      | UC-1, UC-2               |
-| **QA-4** | Portability       | Deployable to container making easier to move the application between environments      | UC-3                     |
+| ID       | Quality Attribute | Scenario                                                                                      | Associated Use Cases Ids |
+|----------|-------------------|-----------------------------------------------------------------------------------------------|--------------------------|
+| **QA-1** | Automation        | Automated local deployment into a Docker container and database initialization                | UC-3                     |
+| **QA-2** | Modularity        | Have the business logic separate from the presentation and persistence layers                 | UC-2                     |
+| **QA-3** | Integration       | Highly integrated from the start, providing multiple API protocols                            | UC-1, UC-2               |
+| **QA-4** | Portability       | Deployable into a Docker container making easier to move the application between environments | UC-3                     |
 
 ### Constraints
 
@@ -84,9 +84,9 @@ The following diagram shows the main components of this hexagonal architecture a
 ![Components View](info/img/components_view.png)
 
 Some notes should be taken having in mind this diagram:
-- The presentation layers implements two API protocols - REST and gRPC - based on a Java API that call the business services
-- The business layer has no dependencies to other layers, in particular the business model component is completely isolated
-- The data layer expose two datasources - MongoDB and MySQL - and each one of them implements the repository interfaces provided by the domain layer
+* The presentation layers implements two API protocols - REST and gRPC - based on a Java API that call the business services
+* The business layer has no dependencies to other layers, in particular the business model component is completely isolated
+* The data layer expose two data sources - MongoDB and MySQL - and each one of them implements the repository interfaces provided by the domain layer
 
 ## Implementation
 
@@ -106,7 +106,7 @@ Some notes should be taken having in mind this diagram:
 
 ### Deployment
 
-To deploy this application and to address QA-1 the bootstrap.sh has been developed and can be executed as stated below to show the available options:
+To deploy this application and to address QA-1 the bootstrap.sh script has been developed and can be executed as stated below to show the available options:
 
 ```shell
 ./bootstrap.sh -h

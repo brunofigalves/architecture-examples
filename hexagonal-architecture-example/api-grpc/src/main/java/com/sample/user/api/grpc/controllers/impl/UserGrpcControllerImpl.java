@@ -1,8 +1,8 @@
-package com.sample.user.api.grpc.impl;
+package com.sample.user.api.grpc.controllers.impl;
 
 import com.sample.user.api.controllers.UserController;
 import com.sample.user.api.grpc.*;
-import com.sample.user.api.grpc.mappers.UserDtoMapper;
+import com.sample.user.api.grpc.controllers.mappers.UserDtoMapper;
 import com.sample.user.domain.models.dtos.UserDto;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.mutiny.Multi;
@@ -11,12 +11,11 @@ import io.smallrye.mutiny.Uni;
 import java.util.List;
 
 @GrpcService
-public class UserGrpcServiceImpl implements UserGrpcService {
+public class UserGrpcControllerImpl implements UserGrpcController {
     private final UserController userController;
     private final UserDtoMapper userDtoMapper;
 
-    public UserGrpcServiceImpl(
-            UserController userController) {
+    public UserGrpcControllerImpl(UserController userController) {
         this.userController = userController;
         this.userDtoMapper = UserDtoMapper.INSTANCE;
     }

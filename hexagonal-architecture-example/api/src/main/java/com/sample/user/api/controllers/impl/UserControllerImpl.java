@@ -1,13 +1,12 @@
 package com.sample.user.api.controllers.impl;
 
 import com.sample.user.api.controllers.UserController;
-import com.sample.user.api.rest.controllers.UserRestController;
 import com.sample.user.domain.models.dtos.UserDto;
 import com.sample.user.domain.services.UserService;
 
 import java.util.List;
 
-public class UserControllerImpl implements UserController, UserRestController {
+public class UserControllerImpl implements UserController {
 
     private final UserService userService;
 
